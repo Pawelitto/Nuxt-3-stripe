@@ -88,7 +88,7 @@ const handleSubmit = async (e: Event) => {
 };
 </script>
 <template>
-  <div>
+  <div class="max-w-2xl m-auto">
     <form @submit.prevent="handleSubmit">
       <fieldset :class="{ dis: loading }">
         <div>
