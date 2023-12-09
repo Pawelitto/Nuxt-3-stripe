@@ -2,11 +2,15 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ['@nuxtjs/supabase', '@nuxt/ui'],
   runtimeConfig: {
-    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
-    ENDPOINT_SECRET: process.env.ENDPOINT_SECRET,
+    stripe_secret_key: process.env.STRIPE_SECRET_KEY,
+    endpoint_secret: process.env.ENDPOINT_SECRET,
     public: {
-      STRIPE_KEY: process.env.STRIPE_KEY,
+      stripe_key: process.env.STRIPE_KEY,
     }
-  }
+  },
+  supabase: {
+    redirect: false
+  },
 })

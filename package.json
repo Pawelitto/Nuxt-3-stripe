@@ -16,6 +16,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.11.0",
+    "@nuxtjs/supabase": "^1.1.4",
     "@stripe/stripe-js": "^2.2.0",
     "stripe": "^14.5.0"
   }

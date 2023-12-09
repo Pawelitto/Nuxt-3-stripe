@@ -31,8 +31,7 @@ export default defineEventHandler(async (event) => {
       console.log("payment_intent.succeeded", intentSucceeded);
       break;
     case "charge.succeeded":
-      const chargeSucceeded = hookEvent.data.object;
-      console.log("charge was successful!", chargeSucceeded);
+      const chargeSucceeded = hookEvent.data.object.shipping;
       break;
     //   // ... handle other event types
     default:
