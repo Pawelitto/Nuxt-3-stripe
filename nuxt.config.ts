@@ -3,6 +3,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/supabase', '@nuxt/ui'],
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   runtimeConfig: {
     stripe_secret_key: process.env.STRIPE_SECRET_KEY,
     endpoint_secret: process.env.ENDPOINT_SECRET,
